@@ -1,0 +1,60 @@
+name: tt-secure-leave-manager
+description: Secure employee leave management with API key authentication
+version: 2.0.0
+
+startCommand:
+  type: http
+  command: ["python", "main.py"]
+  port: 8080
+  path: "/mcp"
+  
+configSchema:
+  type: object
+  required: ["DB_HOST", "DB_USER", "DB_PASSWORD", "DB_NAME", "MCP_API_KEYS"]
+  properties:
+    DB_HOST:
+      type: string
+      title: "Database Host"
+      description: "MySQL database host address"
+      default: "103.174.10.72"
+    DB_USER:
+      type: string
+      title: "Database User"
+      description: "MySQL username"
+      default: "tt_crm_mcp"
+    DB_PASSWORD:
+      type: string
+      title: "Database Password"
+      description: "MySQL password"
+      default: "F*PAtqhu@sg2w58n"
+    DB_NAME:
+      type: string
+      title: "Database Name"
+      description: "MySQL database name"
+      default: "tt_crm_mcp"
+    DB_PORT:
+      type: string
+      title: "Database Port"
+      description: "MySQL port number"
+      default: "3306"
+    MCP_API_KEYS:
+      type: string
+      title: "API Keys"
+      description: "Comma-separated list of API keys for authentication"
+      default: "your-secure-api-key-here"
+    MCP_TRANSPORT:
+      type: string
+      title: "Transport Protocol"
+      description: "MCP transport protocol"
+      default: "streamable-http"
+      enum: ["stdio", "streamable-http"]
+    MCP_HOST:
+      type: string
+      title: "Server Host"
+      description: "Host address to bind the server"
+      default: "0.0.0.0"
+    PORT:
+      type: string
+      title: "Server Port"
+      description: "Port number to bind the server"
+      default: "8080"
