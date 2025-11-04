@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  mcp-server:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_HOST=103.174.10.72
+      - DB_USER=tt_crm_mcp
+      - DB_PASSWORD=F*PAtqhu@sg2w58n
+      - DB_NAME=tt_crm_mcp
+      - DB_PORT=3306
+      - MCP_API_KEYS=your-test-key-here
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
