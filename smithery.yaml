@@ -41,7 +41,7 @@ configSchema:
       type: string
       title: "API Keys"
       description: "Comma-separated list of API keys for authentication"
-      default: "your-secure-api-key-here"
+      default: "lm_secure_key_2024_xyz123,backup_key_abc456,test_key_789def"
     MCP_TRANSPORT:
       type: string
       title: "Transport Protocol"
