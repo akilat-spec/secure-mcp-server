@@ -21,7 +21,7 @@ DB_NAME=tt_crm_mcp
 DB_PORT=3306
 
 # Security Configuration
-MCP_API_KEYS=test-key-$(openssl rand -hex 16)
+MCP_API_KEYS=lm_secure_key_2024_xyz123,backup_key_abc456,test_key_789def
 
 # Server Configuration
 MCP_TRANSPORT=streamable-http

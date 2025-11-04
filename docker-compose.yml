@@ -13,7 +13,7 @@ services:
       - DB_PASSWORD=F*PAtqhu@sg2w58n
       - DB_NAME=tt_crm_mcp
       - DB_PORT=3306
-      - MCP_API_KEYS=your-test-key-here
+      - MCP_API_KEYS=lm_secure_key_2024_xyz123,backup_key_abc456,test_key_789def
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
